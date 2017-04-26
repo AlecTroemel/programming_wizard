@@ -1,0 +1,16 @@
+spell = "spell", white space, identifier, ":", white space
+			 { CAST }
+cast = "cast", white space, [ level ], white space, identifier, white space
+		{ setting }
+setting = identifier, "=", variable
+variable = element | identifier 
+element = "fire" | "water" | "earth" | "electricity" | "none" | "ice" | "wind"
+identifier = alphabetic character, { alphabetic character | digit | symbols} ;
+alphabetic character =  "A" | "B" | "C" | "D" | "E" | "F" | "G"
+	                  | "H" | "I" | "J" | "K" | "L" | "M" | "N"
+	                  | "O" | "P" | "Q" | "R" | "S" | "T" | "U"
+	                  | "V" | "W" | "X" | "Y" | "Z" ;
+digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
+symbols = "_"
+white space = ? white space characters ? ;
+all characters = ? all visible characters ? ;
